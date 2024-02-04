@@ -46,6 +46,11 @@ async function fetchPlaylistInfo(id) {
   }
 }
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+}
+);
+
 app.get("/api/:id", async (req, res) => {
   const { id } = req.params;
   try {
