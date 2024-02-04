@@ -64,7 +64,7 @@ app.get("/api/:id", async (req, res) => {
     const playbackSpeeds = [2, 1.75, 1.5, 1.25, 1.0, 0.75, 0.5, 0.25];
     const playbackSpeedDurations = {};
     playbackSpeeds.forEach(speed => {
-      playbackSpeedDurations[speed] = totalDuration / speed;
+      playbackSpeedDurations[speed] = formatDuration(totalDuration / speed);
     });
     console.log("Total Duration:", formatDuration(totalDuration));
     console.log("Average Duration:", formatDuration(averageDuration));
